@@ -1,0 +1,266 @@
+<style>
+
+	/******** GLOBAL STYLES ********/
+
+	body {
+		margin: 0;
+		padding: 0;
+		background: #39f;
+	}
+
+	.logo-box {
+		background: #39f;
+		width: 700px;
+		height: 500px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: -9;
+	}
+
+
+	/******** CENTER BOX ********/
+
+	.cube {
+		position: absolute;
+		top: 240px;
+		left: 290px;
+	}
+
+	.cube .lb, .cube .rb, .cube .lrt {
+		height: 50px;
+		width: 40px;
+		background: #fff;
+		position: relative;
+	}
+
+	.cube .lb {
+		-moz-transform: skewY(30deg);
+		-webkit-transform: skewY(30deg);
+		-o-transform: skewY(30deg);
+		-ms-transform: skewY(30deg);
+		transform: skewY(30deg);
+	}
+
+	.cube .rb {
+		left: 45px;
+		top: -50px;
+		-moz-transform: skewY(-30deg);
+		-webkit-transform: skewY(-30deg);
+		-o-transform: skewY(-30deg);
+		-ms-transform: skewY(-30deg);
+		transform: skewY(-30deg);
+	}
+
+	.cube .lrt {
+		height: 45px;
+		top: -138px;
+		left: 22px;	
+		-moz-transform: rotate(60deg) skewY(-30deg);
+		-webkit-transform: rotate(60deg) skewY(-30deg);
+		-o-transform: rotate(60deg) skewY(-30deg);
+		-ms-transform: rotate(60deg) skewY(-30deg);
+		transform: rotate(60deg) skewY(-30deg);
+	}
+
+
+	/******** CIRCLES 1, 2 and 3 ********/
+
+	.circle1, .circle2, .circle3 {
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		position: relative;
+	}
+
+	.circle1 {
+		height: 140px;
+		width: 140px;
+		background: #39f;
+		z-index: -1;
+		top: 182px;
+		left: 262px;
+
+	}
+
+	.circle2 {
+		height: 200px;
+		width: 200px;
+		background: #fff;
+		z-index: -2;
+		left: 232px;
+		top: 12px;
+	}
+
+	.circle3 { 
+		height: 230px;
+		width: 230px;
+		background: #39f;
+		z-index: -3;
+		left: 217px;
+		top: -305px;
+	}
+
+
+	/******** CREATING CIRCLE ARROWS ********/
+
+	.arw .legL, .arw .legR {
+		background: #39f;
+		width: 16px;
+		height: 17px;
+		position: relative;
+	}
+
+	.arw .legL {
+		-moz-transform: skewX(135deg);
+		-webkit-transform: skewX(135deg);
+		-o-transform: skewX(135deg);
+		-ms-transform: skewX(135deg);
+		transform: skewX(135deg);
+	}
+
+	.arw .legR {
+		-moz-transform: skewX(-135deg);
+		-webkit-transform: skewX(-135deg);
+		-o-transform: skewX(-135deg);
+		-ms-transform: skewX(-135deg);
+		transform: skewX(-135deg);
+	}
+
+
+	/******** POSITIONING CIRCLE ARROWS ********/
+
+	.arw#set1, .arw#set2, .arw#set3 {
+		width: 25px;
+		position: relative;
+	}
+
+	.arw#set1 {
+		top: -21px;
+		left: 320px;
+	}
+
+	.arw#set2 {
+		top: -176px;
+		left: 244px;
+		-moz-transform: rotate(115deg);
+		-webkit-transform: rotate(115deg);
+		-o-transform: rotate(115deg);
+		-ms-transform: rotate(115deg);
+		transform: rotate(115deg);
+	}
+
+	.arw#set3 {
+		top: -210px;
+		left: 396px;
+		-moz-transform: rotate(245deg);
+		-webkit-transform: rotate(245deg);
+		-o-transform: rotate(245deg);
+		-ms-transform: rotate(245deg);
+		transform: rotate(245deg);
+	}
+
+
+	/******** CREATING & POSITIONING LIGHTNINGS ********/
+
+	.lightningTop .triaB, .lightningTop .triaT, .lightningBottom .triaB, .lightningBottom .triaT {
+		position: relative;
+		z-index: -4;
+		height: 0;
+	}
+
+	.lightningTop .triaB, .lightningTop .triaT {
+		-moz-transform: rotate(35deg) skewX(-25deg);
+		-webkit-transform: rotate(35deg) skewX(-25deg);
+		-o-transform: rotate(35deg) skewX(-25deg);
+		-ms-transform: rotate(35deg) skewX(-25deg);
+		transform: rotate(35deg) skewY(-25deg);
+	}
+
+	.lightningBottom .triaB, .lightningBottom .triaT {
+		-moz-transform: rotate(225deg) skewY(-25deg);
+		-webkit-transform: rotate(225deg) skewX(-25deg);
+		-o-transform: rotate(225deg) skewX(-25deg);
+		-ms-transform: rotate(225deg) skewX(-25deg);
+		transform: rotate(225deg) skewY(-25deg);
+	}
+
+	.lightningTop .triaB {
+		border-bottom: 110px solid white;
+		border-left: 40px solid transparent;
+		border-right: 5px solid transparent;
+		width: 10px;
+		top: -595px;
+		left: 380px;
+	}
+
+	.lightningTop .triaT {
+		width: 0;
+		border-left: 33px solid transparent;
+		border-bottom: 65px solid white;
+		top: -745px;
+		left: 430px;
+	}
+
+	.lightningBottom .triaB {
+		border-bottom: 110px solid white;
+		border-left: 40px solid transparent;
+		border-right: 5px solid transparent;
+		width: 10px;
+		top: -535px;
+		left: 220px;
+	}
+
+	.lightningBottom .triaT {
+		width: 0;
+		border-left: 35px solid transparent;
+		border-bottom: 65px solid white;
+		top: -570px;
+		left: 185px;
+	}
+
+</style>
+
+<div class="logo-box">
+
+	<div class="cube">
+		<div class="lb"></div>
+		<div class="rb"></div>
+		<div class="lrt"></div>
+	</div>
+
+	<div class="circles-init">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+	</div>
+
+	<div class="arw" id="set1">
+		<div class="legL"></div>
+		<div class="legR"></div>
+	</div>
+
+	<div class="arw" id="set2">
+		<div class="legL"></div>
+		<div class="legR"></div>
+	</div>
+
+	<div class="arw" id="set3">
+		<div class="legL"></div>
+		<div class="legR"></div>
+	</div>
+
+	<div class="circle3"></div>
+
+	<div class="lightningTop">
+		<div class="triaB"></div>
+		<div class="triaT"></div>
+	</div>
+
+	<div class="lightningBottom">
+		<div class="triaB"></div>
+		<div class="triaT"></div>
+	</div>
+
+</div>
